@@ -1005,10 +1005,10 @@ main {
 
 .nexa-link {
   font-weight: 700;
-  background: linear-gradient(135deg, var(--clr-primary), var(--clr-accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  background: linear-gradient(135deg, var(--clr-primary), var(--clr-accent)) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
   text-decoration: none;
   position: relative;
   display: inline-block;
