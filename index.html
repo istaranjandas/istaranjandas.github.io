@@ -3,216 +3,337 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio" />
+    <meta name="description" content="Istaranjan Das - Portfolio | Full-Stack Software Engineer at Accenture" />
+    <meta name="keywords" content="Istaranjan Das, Portfolio, Software Engineer, Accenture, Full-Stack, React, Java, Silicon Institute of Technology, Web Developer" />
+    <meta name="author" content="Istaranjan Das" />
+    
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Istaranjan Das | Portfolio" />
+    <meta property="og:description" content="Full-Stack Software Engineer at Accenture. Explore my projects, skills, and professional journey." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://github.com/istaranjandas" />
+
+    <!-- Google Fonts Links -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/fa62c117c7.js"
-      crossorigin="anonymous"
-    ></script>
+    
+    <!-- Font Awesome (Robust CSS CDN to bypass adblockers) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css" />
-    <title>Istaranjan Das</title>
+    
+    <title>Istaranjan Das | Portfolio</title>
   </head>
   <body class="light" id="top">
-    <header class="header center">
-      <h3>
-        <a href="" class="link"
-          >IRD.</a
-        >
-      </h3>
+    <!-- Header Navigation -->
+    <header class="header center" id="main-header">
+      <div class="header__content">
+        <h3>
+          <a href="#top" class="logo">IRD.</a>
+        </h3>
 
-      <nav class="nav center">
-        <ul class="nav__list center">
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#projects">Projects</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#skills">Skills</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="#contact">Contact</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="blog.html">Blog</a>
-          </li>
-        </ul>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__list-item">
+              <a class="link link--nav" href="#experience">Experience</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="link link--nav" href="#projects">Projects</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="link link--nav" href="#skills">Skills</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="link link--nav" href="#contact">Contact</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="link link--nav" href="blog.html">Blog</a>
+            </li>
+          </ul>
 
-        <button type="button" aria-label="toggle theme" class="btn btn--icon">
-          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
-        </button>
+          <div class="nav__actions">
+            <!-- Theme toggle button -->
+            <button type="button" aria-label="toggle theme" class="btn btn--icon">
+              <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+            </button>
 
-        <button
-          type="button"
-          aria-label="toggle navigation"
-          class="btn btn--icon nav__hamburger"
-        >
-          <i aria-hidden="true" class="fas fa-bars"></i>
-        </button>
-      </nav>
+            <!-- Mobile menu hamburger -->
+            <button
+              type="button"
+              aria-label="toggle navigation"
+              class="btn btn--icon nav__hamburger"
+            >
+              <i aria-hidden="true" class="fas fa-bars"></i>
+            </button>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main>
-      <!-- About -->
-      <div class="about center">
+      <!-- Hero Section -->
+      <section class="about-container">
         <h1>Hi, I am <span class="about__name">Istaranjan Das.</span></h1>
-        <h2 class="about__role">A student and coder.</h2>
+        <h2 class="about__role">Packaged App Development Analyst @ Accenture</h2>
         <p class="about__desc">
-          A 4th year Engineering student at Silicon Institute of Technology with Computer Science and Engineering as my specialization. 
-          I am aiming to join a good tech company in the future. I have had a liking for technology and finance since my childhood. 
-          I have knowledge about various programming languages.
+          I am a passionate software engineer with around 3 years of professional experience at <strong>Accenture</strong>. 
+          I specialize in architecting and developing customized Salesforce solutions leveraging Apex, Lightning Web Components (LWC), 
+          declarative tools like Flows, and managing robust environment deployments.
         </p>
 
-        <div class="about__contact center">
-          <a href="https://drive.google.com/file/d/1Yy-6Q1cOYbucDfuZ_nM-Kw_yaNDpH4MH/view?usp=sharing">
-            <span class="btn btn--outline">Resume</span>
+        <div class="about__contact">
+          <a href="https://drive.google.com/file/d/1Yy-6Q1cOYbucDfuZ_nM-Kw_yaNDpH4MH/view?usp=sharing" target="_blank" class="btn--action btn--filled">
+            <span>View Resume</span> <i class="fas fa-file-download"></i>
           </a>
+          
+          <div class="social-links-wrapper">
+            <a
+              href="https://github.com/istaranjandas"
+              aria-label="github"
+              target="_blank"
+              class="link--social"
+            >
+              <i aria-hidden="true" class="fab fa-github"></i>
+            </a>
 
-          <a
-            href="https://github.com/istaranjandas"
-            aria-label="github"
-            class="link link--icon"
-          >
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-
-          <a
-            href="https://linkedin.com/in/istaranjandas"
-            aria-label="linkedin"
-            class="link link--icon"
-          >
-            <i aria-hidden="true" class="fab fa-linkedin"></i>
-          </a>
+            <a
+              href="https://linkedin.com/in/istaranjandas"
+              aria-label="linkedin"
+              target="_blank"
+              class="link--social"
+            >
+              <i aria-hidden="true" class="fab fa-linkedin"></i>
+            </a>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <!-- Projects -->
+      <!-- Professional Experience Section -->
+      <section id="experience" class="section experience">
+        <h2 class="section__title">Professional Experience</h2>
+        
+        <div class="experience-timeline">
+          <!-- Timeline Item 1: Accenture -->
+          <div class="timeline-item">
+            <div class="timeline-dot">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Packaged App Development Analyst</h3>
+                  <span class="timeline-company">Accenture</span>
+                </div>
+                <span class="timeline-date">July 2023 - Present</span>
+              </div>
+              <p class="timeline-desc">
+                Designing, developing, and deploying customized enterprise Salesforce CRM solutions leveraging cloud architectures:
+              </p>
+              <ul class="timeline-bullets">
+                <li>Designed, developed, and maintained customized Salesforce solutions leveraging Apex, Lightning Web Components (LWC), and declarative tools like Flows.</li>
+                <li>Managed complex metadata deployments and environment synchronizations using Git and Salesforce CLI.</li>
+                <li>Streamlined version control processes using Git, efficiently handling branching strategies, resolving merge conflicts, and managing code differences across multiple project streams.</li>
+                <li>Troubleshooted and resolved intricate backend logic errors, deployment failures, and integration issues within large-scale enterprise environments.</li>
+                <li>Optimized existing codebases and simplified development workflows by applying structured efficiency frameworks to reduce complexity and improve execution speed.</li>
+              </ul>
+              <div class="timeline-tech-stack">
+                <span class="tech-tag">Salesforce</span>
+                <span class="tech-tag">Apex</span>
+                <span class="tech-tag">LWC</span>
+                <span class="tech-tag">Flows</span>
+                <span class="tech-tag">Salesforce CLI</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Git</span>
+                <span class="tech-tag">Agile</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2: Silicon Institute of Technology -->
+          <div class="timeline-item">
+            <div class="timeline-dot">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-content glass-panel">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">B.Tech in Computer Science and Engineering</h3>
+                  <span class="timeline-company">Silicon Institute of Technology</span>
+                </div>
+                <span class="timeline-date">2019 - 2023</span>
+              </div>
+              <p class="timeline-desc">
+                Acquired solid foundations in core computer science subjects, algorithms, and software development methodologies:
+              </p>
+              <ul class="timeline-bullets">
+                <li>Graduated with comprehensive coursework including Data Structures & Algorithms, Object-Oriented Programming, Database Management, and Machine Learning.</li>
+                <li>Authored and collaborated on interactive technical projects including scorekeeping quiz sites, local automation scripts, and 3D graphics interfaces.</li>
+                <li>Active participant in campus hackathons and programmatic study tracks.</li>
+              </ul>
+              <div class="timeline-tech-stack">
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">HTML/CSS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
       <section id="projects" class="section projects">
-        <h2 class="section__title">Projects</h2>
+        <h2 class="section__title">GitHub Showcase</h2>
+        
+        <!-- Interactive Controls -->
+        <div class="projects-controls">
+          <div class="search-wrapper">
+            <i class="fas fa-search search-icon"></i>
+            <input 
+              type="text" 
+              id="proj-search" 
+              class="search-input" 
+              placeholder="Search by name, technology, or description..." 
+              aria-label="Search repositories"
+            />
+          </div>
+          
+          <div class="filter-tabs">
+            <button type="button" class="filter-tab active" data-filter="all">All Projects</button>
+            <button type="button" class="filter-tab" data-filter="react-js">React & JS</button>
+            <button type="button" class="filter-tab" data-filter="html-css">HTML & CSS</button>
+            <button type="button" class="filter-tab" data-filter="others">Backend & Others</button>
+          </div>
+        </div>
 
+        <!-- Dynamic Grid loaded via JavaScript -->
         <div class="projects__grid">
-          <div class="project">
-            <h3>News Geek</h3>
-            <p class="project__description">
-              A news website consisting news of various topics such as general, entertainment, sports, business etc. 
-              News is fetched through opensource newsAPI and the technologies used to build this website are React.js and bootstrap.
-            </p>
-            <ul class="project__stack">
-              <li class="project__stack-item">HTML</li>
-              <li class="project__stack-item">CSS</li>
-              <li class="project__stack-item">React.js</li>
-              <li class="project__stack-item">Bootstrap</li>
-            </ul>
+          <!-- Loading fallback / JS-disabled indicator -->
+          <div class="no-results-message glass-panel" style="grid-column: 1 / -1;">
+            <p><i class="fas fa-spinner fa-spin"></i> Loading interactive project archive...</p>
+          </div>
+        </div>
 
-            <a
-              href="https://github.com/istaranjandas/NewsPage"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
+        <!-- Show More button -->
+        <div class="projects-more-container">
+          <button type="button" id="btn-show-more" class="btn--action btn--outline">
+            <span>Explore More Repos</span> <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="section skills" id="skills">
+        <h2 class="section__title">Skills & Technologies</h2>
+        
+        <div class="skills-container">
+          <!-- Category 1: Salesforce Cloud Platform -->
+          <div class="skills-category">
+            <h3 class="skills-category-title">Salesforce & Cloud Platforms</h3>
+            <ul class="skills__list">
+              <li class="skills-pill"><i class="fab fa-salesforce" style="color: #00a1e0;"></i> Salesforce CRM</li>
+              <li class="skills-pill"><i class="fas fa-cloud" style="color: #00a1e0;"></i> Apex Development</li>
+              <li class="skills-pill"><i class="fab fa-js-square" style="color: #f7df1e;"></i> Lightning Web Components (LWC)</li>
+              <li class="skills-pill"><i class="fas fa-project-diagram" style="color: #4caf50;"></i> Salesforce Flows</li>
+              <li class="skills-pill"><i class="fas fa-terminal" style="color: #607d8b;"></i> Salesforce CLI</li>
+              <li class="skills-pill"><i class="fas fa-database" style="color: #00758f;"></i> SOQL / SOSL</li>
+            </ul>
           </div>
 
-          <div class="project">
-            <h3>Text Utility</h3>
-            <p class="project__description">
-              A text utility app in which a text can be manipulated in various manner such as converting small letters to capital 
-              and functionalities like reading a text out loud and removing extra spaces are also given. 
-              This is built using React.js
-            </p>
-            <ul class="project__stack">
-              <li class="project__stack-item">HTML</li>
-              <li class="project__stack-item">CSS</li>
-              <li class="project__stack-item">React.js</li>
+          <!-- Category 2: Languages -->
+          <div class="skills-category">
+            <h3 class="skills-category-title">Programming Languages</h3>
+            <ul class="skills__list">
+              <li class="skills-pill"><i class="fab fa-js-square" style="color: #f7df1e;"></i> JavaScript</li>
+              <li class="skills-pill"><i class="fab fa-react" style="color: #3178c6;"></i> TypeScript</li>
+              <li class="skills-pill"><i class="fab fa-java" style="color: #b07219;"></i> Java</li>
+              <li class="skills-pill"><i class="fas fa-code" style="color: #00599c;"></i> C++</li>
+              <li class="skills-pill"><i class="fab fa-python" style="color: #3572A5;"></i> Python</li>
+              <li class="skills-pill"><i class="fab fa-php" style="color: #4F5D95;"></i> PHP</li>
+              <li class="skills-pill"><i class="fas fa-database" style="color: #00758f;"></i> SQL / MySQL</li>
             </ul>
-
-            <a
-              href="https://github.com/istaranjandas/text-utility"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
           </div>
 
-          <div class="project">
-            <h3>Online Quiz Website</h3>
-            <p class="project__description">
-              An online quiz website where students can singup/login and appear the quiz for five different subjects 
-              and can also appear for mock quiz. 
-              Technologies used are PHP, CSS, MySql and Js.
-            </p>
-            <ul class="project__stack">
-              <li class="project__stack-item">PHP</li>
-              <li class="project__stack-item">MySql</li>
-              <li class="project__stack-item">JavaScript</li>
+          <!-- Category 3: Frameworks & Libraries -->
+          <div class="skills-category">
+            <h3 class="skills-category-title">Frameworks & Libraries</h3>
+            <ul class="skills__list">
+              <li class="skills-pill"><i class="fab fa-react" style="color: #61dafb;"></i> React.js</li>
+              <li class="skills-pill"><i class="fab fa-node-js" style="color: #6cc24a;"></i> Node.js</li>
+              <li class="skills-pill"><i class="fas fa-leaf" style="color: #6db33f;"></i> Spring Boot</li>
+              <li class="skills-pill"><i class="fab fa-bootstrap" style="color: #563d7c;"></i> Bootstrap</li>
+              <li class="skills-pill"><i class="fas fa-cubes" style="color: #00b0ff;"></i> Material UI</li>
+              <li class="skills-pill"><i class="fas fa-shapes" style="color: #ff6e40;"></i> Three.js / WebGL</li>
             </ul>
+          </div>
 
-            <a
-              href="https://github.com/istaranjandas/online-quiz-website"
-              aria-label="source code"
-              class="link link--icon"
-            >
-              <i aria-hidden="true" class="fab fa-github"></i>
-            </a>
+          <!-- Category 4: Tools & Methodologies -->
+          <div class="skills-category">
+            <h3 class="skills-category-title">Tools & Methodologies</h3>
+            <ul class="skills__list">
+              <li class="skills-pill"><i class="fab fa-git-alt" style="color: #f05032;"></i> Git & GitHub</li>
+              <li class="skills-pill"><i class="fas fa-users-cog" style="color: #00a88f;"></i> Agile / Scrum</li>
+              <li class="skills-pill"><i class="fas fa-exchange-alt" style="color: #47a248;"></i> REST APIs</li>
+              <li class="skills-pill"><i class="fas fa-tasks" style="color: #607d8b;"></i> Environment Sync</li>
+              <li class="skills-pill"><i class="fas fa-cogs" style="color: #3f51b5;"></i> Meta-Data Deployments</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <!-- Skills -->
-      <section class="section skills" id="skills">
-        <h2 class="section__title">Skills</h2>
-        <ul class="skills__list">
-          <li class="skills__list-item btn btn--plain">HTML</li>
-          <li class="skills__list-item btn btn--plain">CSS</li>
-          <!-- <li class="skills__list-item btn btn--plain">SCSS</li> -->
-          <li class="skills__list-item btn btn--plain">JavaScript</li>
-          <!-- <li class="skills__list-item btn btn--plain">TypeScript</li> -->
-          <li class="skills__list-item btn btn--plain">React</li>
-          <!-- <li class="skills__list-item btn btn--plain">Redux</li> -->
-          <li class="skills__list-item btn btn--plain">Git</li>
-          <li class="skills__list-item btn btn--plain">Material UI</li>
-          <!-- <li class="skills__list-item btn btn--plain">Jest</li> -->
-          <!-- <li class="skills__list-item btn btn--plain">Enzyme</li> -->
-          <!-- <li class="skills__list-item btn btn--plain">CI/CD</li> -->
-          <li class="skills__list-item btn btn--plain">Machine Learning</li>
-          <li class="skills__list-item btn btn--plain">C++</li>
-          <li class="skills__list-item btn btn--plain">Java</li>
-          <li class="skills__list-item btn btn--plain">Python</li>
-          <li class="skills__list-item btn btn--plain">PHP</li>
-          <li class="skills__list-item btn btn--plain">MySql</li>
-        </ul>
-      </section>
-
-      <!-- Contact -->
-      <section class="section contact center" id="contact">
-        <h2 class="section__title">Contact</h2>
-        <a href="mailto:istaranjandas@gmail.com">
-          <span class="btn btn--outline">Email me</span>
-        </a>
+      <!-- Contact Section -->
+      <section class="section contact" id="contact">
+        <h2 class="section__title">Get In Touch</h2>
+        
+        <div class="contact-wrapper glass-panel">
+          <p class="contact-text">
+            I am always interested in discussing new opportunities, full-stack architectures, or exciting open-source collaborations. 
+            Feel free to reach out to me!
+          </p>
+          <a href="mailto:istaranjandas@gmail.com" class="btn--action btn--filled">
+            <span>Email Me</span> <i class="far fa-envelope"></i>
+          </a>
+        </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
-      <a
-        href="https://github.com/istaranjandas"
-        class="link footer__link"
-      >
-        THANK YOU!
-      </a>
+      <div class="main">
+        <p class="footer__text">
+          Designed & Built with <i class="fas fa-heart footer__heart" aria-hidden="true"></i> by <a href="#" id="nexa-trigger" class="nexa-link">Nexa</a> &copy; 2026
+        </p>
+      </div>
     </footer>
 
-    <div class="scroll-container">
+    <!-- Nexa Modal -->
+    <div id="nexa-modal" class="modal-overlay">
+      <div class="modal-content glass-panel">
+        <button type="button" class="modal-close" id="nexa-close" aria-label="Close modal">&times;</button>
+        <div class="modal-header">
+          <i class="fas fa-robot modal-icon"></i>
+          <h3 class="modal-title">Meet Nexa 🌸</h3>
+        </div>
+        <p class="modal-body">
+          Hi! I am <strong>Nexa</strong>, an agentic AI coding assistant designed by the Google DeepMind team. 
+          As Istaranjan's dedicated pair programmer, I worked autonomously to architect this clean layout, 
+          style these premium HSL glassmorphism cards, compile his 33 GitHub projects, and bring this portfolio 
+          to life. I'm always thrilled to help developers achieve their coding goals! ✨
+        </p>
+      </div>
+    </div>
+
+    <!-- Scroll up button -->
     <div class="scroll-top">
-      <a aria-label="Scroll up" href="#top">
+      <a aria-label="Scroll to top" href="#top" class="btn-scroll">
         <i aria-hidden="true" class="fas fa-arrow-up"></i>
       </a>
     </div>
-    </div>
 
+    <!-- Script File -->
     <script src="./script.js"></script>
   </body>
 </html>

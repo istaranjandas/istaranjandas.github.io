@@ -3,89 +3,121 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio" />
+    <meta name="description" content="Istaranjan Das - Blog | Insights on software engineering and coding" />
+    <meta name="keywords" content="Istaranjan Das, Blog, Coding Insights, Software Engineering, Accenture" />
+    <meta name="author" content="Istaranjan Das" />
+
+    <!-- Google Fonts Links -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/fa62c117c7.js"
-      crossorigin="anonymous"
-    ></script>
+    
+    <!-- Font Awesome (Robust CSS CDN to bypass adblockers) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css" />
-    <title>Istaranjan Das</title>
+    
+    <title>Istaranjan Das | Blog</title>
   </head>
   <body class="light" id="top">
-    <header class="header center">
-      <h3>
-        <a href="" class="link"
-          >IRD.</a
-        >
-      </h3>
+    <!-- Header Navigation -->
+    <header class="header center" id="main-header">
+      <div class="header__content">
+        <h3>
+          <a href="index.html#top" class="logo">IRD.</a>
+        </h3>
 
-      <nav class="nav center">
-        <ul class="nav__list center">
-          <li class="nav__list-item">
-            <a class="link link--nav" href="index.html#projects">Projects</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="index.html#skills">Skills</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="index.html#contact">Contact</a>
-          </li>
-          <li class="nav__list-item">
-            <a class="link link--nav" href="blog.html">Blog</a>
-          </li>
-        </ul>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__list-item">
+              <a class="link link--nav" href="index.html#experience">Experience</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="link link--nav" href="index.html#projects">Projects</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="link link--nav" href="index.html#skills">Skills</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="link link--nav" href="index.html#contact">Contact</a>
+            </li>
+            <li class="nav__list-item">
+              <a class="link link--nav" href="blog.html">Blog</a>
+            </li>
+          </ul>
 
-        <button type="button" aria-label="toggle theme" class="btn btn--icon">
-          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
-        </button>
+          <div class="nav__actions">
+            <!-- Theme toggle button -->
+            <button type="button" aria-label="toggle theme" class="btn btn--icon">
+              <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+            </button>
 
-        <button
-          type="button"
-          aria-label="toggle navigation"
-          class="btn btn--icon nav__hamburger"
-        >
-          <i aria-hidden="true" class="fas fa-bars"></i>
-        </button>
-      </nav>
+            <!-- Mobile menu hamburger -->
+            <button
+              type="button"
+              aria-label="toggle navigation"
+              class="btn btn--icon nav__hamburger"
+            >
+              <i aria-hidden="true" class="fas fa-bars"></i>
+            </button>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main>
-      <!-- About -->
-      <div class="about center">
-        
-        <h2 class="about__role">Welcome to my blog!!</h2>
-        <p class="about__desc">
-          Thanks for checking out. :)
+      <!-- Blog Intro Section -->
+      <section class="about-container" style="min-height: 70vh;">
+        <p class="about__greeting">Insights & Stories</p>
+        <h1>Welcome to my <span class="about__name">Blog!</span></h1>
+        <p class="about__desc" style="margin-bottom: 2em;">
+          Thanks for checking out! Here I'll share concepts, tutorials, and stories from my journey as a developer.
         </p>
-      </div>
-
-
-
+        
+        <div class="contact-wrapper glass-panel" style="max-width: 500px; padding: 2.5em; margin-top: 1em;">
+          <i class="fas fa-tools" style="font-size: 2.5rem; margin-bottom: 0.5em; color: var(--clr-primary);"></i>
+          <h3 style="margin-bottom: 0.5em; color: var(--clr-fg-alt);">Under Construction</h3>
+          <p style="font-size: 0.95rem;">
+            I'm currently busy preparing some amazing posts! Check back soon for tutorials on React, Java, system design, and more.
+          </p>
+        </div>
+      </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
-      <a
-        href="https://github.com/istaranjandas"
-        class="link footer__link"
-      >
-        
-      </a>
+      <div class="main">
+        <p class="footer__text">
+          Designed & Built with <i class="fas fa-heart footer__heart" aria-hidden="true"></i> by <a href="#" id="nexa-trigger" class="nexa-link">Nexa</a> &copy; 2026
+        </p>
+      </div>
     </footer>
 
-    <div class="scroll-container">
+    <!-- Nexa Modal -->
+    <div id="nexa-modal" class="modal-overlay">
+      <div class="modal-content glass-panel">
+        <button type="button" class="modal-close" id="nexa-close" aria-label="Close modal">&times;</button>
+        <div class="modal-header">
+          <i class="fas fa-robot modal-icon"></i>
+          <h3 class="modal-title">Meet Nexa 🌸</h3>
+        </div>
+        <p class="modal-body">
+          Hi! I am <strong>Nexa</strong>, an agentic AI coding assistant designed by the Google DeepMind team. 
+          As Istaranjan's dedicated pair programmer, I worked autonomously to architect this clean layout, 
+          style these premium HSL glassmorphism cards, compile his 33 GitHub projects, and bring this portfolio 
+          to life. I'm always thrilled to help developers achieve their coding goals! ✨
+        </p>
+      </div>
+    </div>
+
+    <!-- Scroll up button -->
     <div class="scroll-top">
-      <a aria-label="Scroll up" href="#top">
+      <a aria-label="Scroll to top" href="#top" class="btn-scroll">
         <i aria-hidden="true" class="fas fa-arrow-up"></i>
       </a>
     </div>
-    </div>
 
+    <!-- Script File -->
     <script src="./script.js"></script>
   </body>
 </html>
