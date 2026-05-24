@@ -101,7 +101,12 @@ p {
 }
 
 ul { list-style-type: none; }
-a { text-decoration: none; color: inherit; }
+a {
+  text-decoration: none;
+  color: inherit;
+  background: transparent !important;
+  background-color: transparent !important;
+}
 button { cursor: pointer; }
 
 /*=========================================
@@ -219,6 +224,8 @@ main {
   color: var(--clr-fg);
   position: relative;
   padding: 0.3em 0;
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
 .link--nav:hover {
