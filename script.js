@@ -347,16 +347,60 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("portfolio-btn-theme", btnClass);
   };
 
-  const toggleTheme = () => {
-    if (isDark()) {
-      setTheme("light", "fa-moon");
-    } else {
-      setTheme("dark", "fa-sun");
+  // ==========================================
+  // VIEW TRANSITIONS MOVEMENT & RIPPLE
+  // ==========================================
+  const toggleTheme = (e) => {
+    const isAppearanceTransition = document.startViewTransition &&
+      !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const toggleThemeLogic = () => {
+      if (isDark()) {
+        setTheme("light", "fa-moon");
+      } else {
+        setTheme("dark", "fa-sun");
+      }
+    };
+
+    if (!isAppearanceTransition) {
+      toggleThemeLogic();
+      return;
     }
+
+    // Capture circular reveal epicenter coordinate (where user clicked)
+    const x = e.clientX || window.innerWidth / 2;
+    const y = e.clientY || window.innerHeight / 2;
+    const endRadius = Math.hypot(
+      Math.max(x, window.innerWidth - x),
+      Math.max(y, window.innerHeight - y)
+    );
+
+    const transition = document.startViewTransition(() => {
+      toggleThemeLogic();
+    });
+
+    transition.ready.then(() => {
+      const clipPath = [
+        `circle(0px at ${x}px ${y}px)`,
+        `circle(${endRadius}px at ${x}px ${y}px)`
+      ];
+      document.documentElement.animate(
+        {
+          clipPath: isDark() ? [...clipPath].reverse() : clipPath,
+        },
+        {
+          duration: 500,
+          easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+          pseudoElement: isDark()
+            ? '::view-transition-old(root)'
+            : '::view-transition-new(root)',
+        }
+      );
+    });
   };
 
   if (btnTheme) {
-    btnTheme.parentElement.addEventListener("click", toggleTheme);
+    btnTheme.parentElement.addEventListener("click", (e) => toggleTheme(e));
   }
 
   // ==========================================
@@ -413,6 +457,27 @@ document.addEventListener("DOMContentLoaded", () => {
   handleScrollEffects(); // Call initially on page load
 
   // ==========================================
+  // SCROLL REVEAL (INTERSECTION OBSERVER) ENGINE
+  // ==========================================
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("revealed");
+        observer.unobserve(entry.target); // Reveal once, keep performance optimal
+      }
+    });
+  }, {
+    threshold: 0.05,
+    rootMargin: "0px 0px -40px 0px"
+  });
+
+  // Observe static reveal elements on DOM load
+  const revealElements = document.querySelectorAll(".reveal-element");
+  if (revealElements.length > 0) {
+    revealElements.forEach(el => revealObserver.observe(el));
+  }
+
+  // ==========================================
   // INTERACTIVE REPOSITORIES Showcase Engine
   // ==========================================
   const projectsGrid = document.querySelector(".projects__grid");
@@ -467,10 +532,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       // 5. Generate cards HTML
-      sliced.forEach(repo => {
+      sliced.forEach((repo, index) => {
         const langDotColor = getLanguageColor(repo.language);
         const card = document.createElement("div");
-        card.className = "project-card glass-panel";
+        card.className = "project-card glass-panel reveal-element";
+        // Stagger dynamic cards reveal delays!
+        card.style.transitionDelay = `${(index % 3) * 100}ms`;
         card.innerHTML = `
           <div>
             <div class="project-card-header">
@@ -496,6 +563,10 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
         projectsGrid.appendChild(card);
       });
+
+      // Dynamically register new cards with the Intersection Observer Reveal Engine
+      const dynamicReveals = projectsGrid.querySelectorAll(".reveal-element");
+      dynamicReveals.forEach(el => revealObserver.observe(el));
     };
 
     // Helper for beautiful custom badge colors per coding language
