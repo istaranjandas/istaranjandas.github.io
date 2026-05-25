@@ -76,5 +76,16 @@ To add or update a project, simply append or modify an object in the array using
 
 ---
 
+## 🛠️ Update Log
+
+### May 2026 - Accessibility & Contrast Hotfix
+- **Theme & Visibility Fix:** Overhauled the universal CSS reset to resolve a critical inheritance bug where nested children (like `span` tags inside `.btn--filled` and `.btn-scroll` components) inherited a solid background-color, covering up and hiding the button gradients underneath. Removed dangerous universal `background-color: inherit` overrides, restoring standard transparent behaviors and full AAA readability for white text button elements in light mode.
+- **Cache-Busting Integration:** Implemented cache-busting version query parameters (`styles.css?v=1.3`) across all page layouts to bypass browser caching and force immediate updates.
+- **High-Contrast Fallbacks:** Applied highly resilient solid background-color fallbacks (`#2563eb` and `var(--clr-primary)`) to all filled and scroll buttons. If linear gradients are unsupported or overridden by custom browser/device accessibility modes, the button gracefully degrades to a gorgeous solid dark blue, ensuring white text remains fully legible at all times.
+- **Scroll to Top Optimization:** Corrected the visual styling of the floating back-to-top component, restoring its premium dark-to-light gradient backdrop and crisp white arrow icon across all screen heights.
+
+---
+
 ## 📝 License
 Feel free to clone, edit, and use this codebase as a base for your own personal developer portfolio!
+

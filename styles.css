@@ -54,12 +54,16 @@
   margin: 0;
   border: 0;
   outline: 0;
-  background-color: inherit;
-  color: inherit;
-  font-family: inherit;
-  font-size: inherit;
   box-shadow: none;
   box-sizing: border-box;
+}
+
+/* Form and interactive element typography/color inheritance */
+input, select, textarea, button {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
 }
 
 i {
@@ -104,8 +108,6 @@ ul { list-style-type: none; }
 a {
   text-decoration: none;
   color: inherit;
-  background: transparent !important;
-  background-color: transparent !important;
 }
 button { cursor: pointer; }
 
@@ -343,7 +345,10 @@ main {
 }
 
 .btn--filled {
-  background: linear-gradient(135deg, var(--clr-primary), var(--clr-accent));
+  background-color: #2563eb !important; /* Hex solid fallback */
+  background-color: var(--clr-primary) !important; /* Variable solid fallback */
+  background: linear-gradient(135deg, #2563eb, #7c3aed) !important; /* Hex gradient fallback */
+  background: linear-gradient(135deg, var(--clr-primary), var(--clr-accent)) !important; /* Variable gradient */
   color: #fff !important;
   box-shadow: 0 4px 15px rgba(var(--clr-primary-rgb), 0.3);
 }
@@ -578,9 +583,12 @@ main {
 }
 
 .filter-tab.active {
-  background: linear-gradient(135deg, var(--clr-primary), var(--clr-accent));
-  color: #fff;
-  border-color: transparent;
+  background-color: #2563eb !important; /* Hex solid fallback */
+  background-color: var(--clr-primary) !important; /* Variable solid fallback */
+  background: linear-gradient(135deg, #2563eb, #7c3aed) !important; /* Hex gradient fallback */
+  background: linear-gradient(135deg, var(--clr-primary), var(--clr-accent)) !important; /* Variable gradient */
+  color: #fff !important;
+  border-color: transparent !important;
   box-shadow: 0 4px 12px rgba(var(--clr-primary-rgb), 0.2);
 }
 
@@ -792,8 +800,11 @@ main {
 .btn-scroll {
   width: 44px;
   height: 44px;
-  background: linear-gradient(135deg, var(--clr-primary), var(--clr-accent));
-  color: #fff;
+  background-color: #2563eb !important; /* Hex solid fallback */
+  background-color: var(--clr-primary) !important; /* Variable solid fallback */
+  background: linear-gradient(135deg, #2563eb, #7c3aed) !important; /* Hex gradient fallback */
+  background: linear-gradient(135deg, var(--clr-primary), var(--clr-accent)) !important; /* Variable gradient */
+  color: #fff !important;
   border-radius: 50%;
   display: flex;
   align-items: center;
